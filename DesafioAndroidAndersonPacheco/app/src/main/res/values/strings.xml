@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Desafio Android Anderson Pacheco</string>
+
+    <string name="msg_erro_conexao_servidor">Não foi possível se conectar com o servidor, tente novamente mais tarde.</string>
+
+    <string name="title_activity_lista">Listagem de personagens</string>
+    <string name="title_activity_detalhe">Detalhes do Personagem</string>
+    <string name="title_activity_hq">Detalhe da HQ mais cara do personagem</string>
+</resources>
