@@ -6,6 +6,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import br.com.developer.desafioandroidandersonpacheco.R
 import br.com.developer.desafioandroidandersonpacheco.databinding.ActivityDetalheHqBinding
@@ -24,7 +25,7 @@ class DetalheHqActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalheHqBinding
 
     private val charactersViewModel by lazy {
-        ViewModelProviders.of(this).get(
+        ViewModelProvider(this).get(
             CharactersViewModel::class.java
         )
     }
@@ -34,10 +35,10 @@ class DetalheHqActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detalhe_hq)
 
         setToolbar()
-        carregar(false)
+
 
         addObservableWithOnCreate()
-
+        carregar(true)
         val calendar: Calendar = Calendar.getInstance()
         var ts = calendar.timeInMillis
         val stringToHash: String = calendar
