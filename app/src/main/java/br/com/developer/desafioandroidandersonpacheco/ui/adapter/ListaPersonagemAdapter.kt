@@ -45,7 +45,8 @@ class ListaPersonagemAdapter(val ctx: Activity): RecyclerView.Adapter<RecyclerVi
 
         fun bind(obj: ServicoModel) {
             tvNome.text = obj.nome
-            Picasso.with(ctx).load("${obj.foto}/portrait_xlarge.jpg").into(ivFoto)
+
+            Picasso.get().load("${obj.foto}/portrait_xlarge.jpg").into(ivFoto)
             itemView.setOnClickListener { ctx.startActivity(
                 Intent(ctx, obj.target)
                     .putExtra("PARAM_ID", obj.id)

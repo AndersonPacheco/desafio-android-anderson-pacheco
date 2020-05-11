@@ -24,7 +24,7 @@ class DetalhePersonagemActivity : AppCompatActivity() {
 
         binding.tvNome.text = intent.getStringExtra("PARAM_NOME")
         binding.tvDescricao.text = intent.getStringExtra("PARAM_DESCRICAO")
-        Picasso.with(this).load("${intent.getStringExtra("PARAM_FOTO")}/portrait_uncanny.jpg").into(binding.ivIcon)
+        Picasso.get().load("${intent.getStringExtra("PARAM_FOTO")}/portrait_uncanny.jpg").into(binding.ivIcon)
 
         binding.btnHq.setOnClickListener {
             startActivity(Intent(this, DetalheHqActivity::class.java)

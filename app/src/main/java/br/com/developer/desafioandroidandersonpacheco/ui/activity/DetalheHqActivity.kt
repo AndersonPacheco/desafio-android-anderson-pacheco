@@ -71,7 +71,7 @@ class DetalheHqActivity : AppCompatActivity() {
 //                            for (i in 0 until results!!.data!!.results!!.size){
 //                                if (resultsList[i])
 //                            }
-                            Picasso.with(this)
+                            Picasso.get()
                                 .load("${results!!.data!!.results!![0].thumbnail!!.path}" +
                                         "/portrait_uncanny." +
                                         "${results!!.data!!.results!![0].thumbnail!!.extension}")
